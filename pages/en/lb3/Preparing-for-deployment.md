@@ -124,7 +124,7 @@ var options = {
 //...
 
 server.listen(app.get('port'), function() {
-    var baseUrl = (httpOnly? 'http://' : 'https://') - app.get('host') - ':' - app.get('port');
+    var baseUrl = (httpOnly? 'http://' : 'https://') + app.get('host') + ':' + app.get('port');
     app.emit('started', baseUrl);
     console.log('LoopBack server listening @ %s%s', baseUrl, '/');
 });
